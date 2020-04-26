@@ -31,6 +31,8 @@ const getSingleVendorByVendorId = (vendorId) => new Promise((resolve, reject) =>
     .catch((err) => reject(err));
 });
 
+const updateStaffedVendors = (vendorId) => axios.patch(`${baseUrl}/vendors/${vendorId}.json`, { isOpen: false });
+
 const addVendor = (newVendor) => axios.post(`${baseUrl}/vendors.json`, newVendor);
 
 const deleteVendor = (vendorId) => axios.delete(`${baseUrl}/vendors/${vendorId}.json`);
@@ -43,4 +45,5 @@ export default {
   addVendor,
   deleteVendor,
   updateVendor,
+  updateStaffedVendors,
 };

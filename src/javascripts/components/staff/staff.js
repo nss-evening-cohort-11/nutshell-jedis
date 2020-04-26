@@ -232,13 +232,13 @@ const makeNewStaff = (e) => {
   e.preventDefault();
   const myUid = firebase.auth().currentUser.uid;
   const isKidnappedBool = $("input[name='newStaffRadiosKidnapped']:checked").val();
-  const isEotmBool = $("input[name='newStaffRadiosEmployee']:checked").val();
+  // const isEotmBool = $("input[name='newStaffRadiosEmployee']:checked").val();
   const newStaff = {
     name: $('#new-staff-name').val(),
     photoUrl: $('#new-staff-image').val(),
     job: $('#new-staff-job').val(),
     isKidnapped: JSON.parse(isKidnappedBool),
-    isEOTM: JSON.parse(isEotmBool),
+    // isEOTM: JSON.parse(isEotmBool),
     uid: myUid,
   };
   staffData.addStaff(newStaff).then(() => printStaffDashboard())
@@ -249,14 +249,14 @@ const modifyStaff = (e) => {
   e.preventDefault();
   const myUid = firebase.auth().currentUser.uid;
   const isKidnappedBool = $("input[name='editStaffRadiosKidnapped']:checked").val();
-  const isEotmBool = $("input[name='editStaffRadiosEmployee']:checked").val();
+  // const isEotmBool = $("input[name='editStaffRadiosEmployee']:checked").val();
   const staffId = $('.edit-staff-form').attr('id');
   const modifiedStaff = {
     name: $('#edit-staff-name').val(),
     photoUrl: $('#edit-staff-image').val(),
     job: $('#edit-staff-job').val(),
     isKidnapped: JSON.parse(isKidnappedBool),
-    isEOTM: JSON.parse(isEotmBool),
+    // isEOTM: JSON.parse(isEotmBool),
     uid: myUid,
   };
   utils.printToDom('edit-form-container', '');

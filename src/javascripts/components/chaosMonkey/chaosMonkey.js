@@ -1,6 +1,8 @@
 import equipmentStorageContainer from '../equipmentStorageContainer/equipmentStorageContainer';
 import ridesComponent from '../rides/rides';
 import staffComponent from '../staff/staff';
+import vendorsComponent from '../vendors/vendors';
+
 
 import equipData from '../../helpers/data/equipData';
 import ridesData from '../../helpers/data/ridesData';
@@ -57,6 +59,7 @@ const randomChaosMonkeyStrike = () => {
               .then(() => {
                 smash.deleteStaffAssignmentsAndShifts(randStaffId); // delete existing assignments and shifts for the kidnapped staff member
                 staffComponent.printStaffDashboard(); // update the staff dashboard to current
+                vendorsComponent.checkIfVendorsAreStaffed(); // update vendor dashboard to current
               })
               .catch((err) => console.error('problem with kidnap staff in Chaos Monkey', err));
           } else {
@@ -115,7 +118,7 @@ const chaosMonkeyAlert = (randomStrike) => {
 };
 
 const unleashChaosMonkey = () => {
-  setInterval(randomChaosMonkeyStrike, 60 * 1000);
+  setInterval(randomChaosMonkeyStrike, 60000 * 1000);
 };
 
 export default { unleashChaosMonkey };
