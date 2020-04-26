@@ -33,6 +33,13 @@ const getRideAssignmentsByEntityId = (entityId) => new Promise((resolve, reject)
     .catch((err) => reject(err));
 });
 
+const getAssignmentById = (assignmentId) => axios.get(`${baseUrl}/assignments/${assignmentId}`);
+
 const deleteAssignmentById = (assignmentId) => axios.delete(`${baseUrl}/assignments/${assignmentId}.json`);
 
-export default { getRideAssignmentsByEntityId, deleteAssignmentById, getAllAssignments };
+export default {
+  getRideAssignmentsByEntityId,
+  deleteAssignmentById,
+  getAllAssignments,
+  getAssignmentById,
+};
