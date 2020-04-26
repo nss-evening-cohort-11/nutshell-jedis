@@ -7,6 +7,7 @@ import smashData from '../../helpers/data/smashData';
 
 const checkIfVendorsAreStaffed = () => {
   smashData.getVendorsWithAssignments().then((assignedVendors) => {
+    console.error(assignedVendors);
     assignedVendors.forEach((vendorAssignment) => {
       const vendorId = vendorAssignment.id;
       if (vendorAssignment.assignments.length < 1) {
