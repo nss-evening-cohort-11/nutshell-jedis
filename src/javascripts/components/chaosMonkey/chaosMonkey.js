@@ -47,7 +47,8 @@ const randomChaosMonkeyStrike = () => {
     case 2: // Kidnap Staff Member
       staffData.getStaffs()
         .then((allStaff) => {
-          const staffRandNum = Math.ceil(Math.random() * allStaff.length - 1);
+          // const staffRandNum = Math.ceil(Math.random() * allStaff.length - 1);
+          const staffRandNum = 7;
 
           if (allStaff[staffRandNum].isKidnapped === false) { // check if already kidnapped
             const randStaffId = allStaff[staffRandNum].id; // find a random staff member
@@ -58,7 +59,7 @@ const randomChaosMonkeyStrike = () => {
 
             staffData.kidnapStaff(randStaffId) // change staff's boolean isKidnapped to 'true'
               .then(() => {
-                smash.deleteStaffAssignmentsAndShifts(randStaffId); // delete existing assignments and shifts for the kidnapped staff member
+                smash.deleteStaffAssignmentsByStaffId(randStaffId); // delete existing assignments and shifts for the kidnapped staff member
                 staffComponent.printStaffDashboard(); // update the staff dashboard to current
                 vendorsComponent.checkIfVendorsAreStaffed(); // update vendor dashboard to current
               })

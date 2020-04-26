@@ -16,7 +16,7 @@
   "staffMember3": {
     "name": "Alan Grant",
     "photoUrl": "https://2.bp.blogspot.com/-1QpJ2T18_8A/UZGO162GZ2I/AAAAAAAAAe0/DUFuDgN7tMY/s1600/The+Smirk.png",
-    "isKidnapped": true,
+    "isKidnapped": false,
     "job": "Archaeologist",
     "uid": "Joey"
   },

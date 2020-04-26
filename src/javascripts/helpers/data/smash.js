@@ -1,12 +1,12 @@
-import axios from 'axios';
-import apiKeys from '../apiKeys.json';
+// import axios from 'axios';
+// import apiKeys from '../apiKeys.json';
 
 import assignmentsData from './assignmentsData';
 import shiftsData from './shiftsData';
 import calendarData from './calendarData';
 import jobTypeData from './jobTypeData';
 
-const baseUrl = apiKeys.firebaseKeys.databaseURL;
+// const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 // const removeAllJobTypesAndAssignmentByAssetId = (assetId) => new Promise((resolve, reject) => {
 //   assignmentsData.getRideAssignmentsByEntityId(assetId)
@@ -46,21 +46,35 @@ const removeAllJobTypesAndAssignmentByAssetId = (assetId) => new Promise((resolv
     .catch((err) => reject(err));
 });
 
-const deleteStaffAssignmentsAndShifts = (staffMemberId) => new Promise((resolve, reject) => {
+// const deleteStaffAssignmentsAndShifts = (staffMemberId) => new Promise((resolve, reject) => {
+//   assignmentsData.getAllAssignments()
+//     .then((assignmentsArray) => {
+//       const assignmentsToRemove = assignmentsArray.filter((a) => a.staffId === staffMemberId);
+//       assignmentsToRemove.forEach((item) => {
+//         axios.delete(`${baseUrl}/assignments/${item.id}.json`);
+//         shiftsData.getAllShifts()
+//           .then((shiftsArray) => {
+//             const deleteThisShift = shiftsArray.find((shift) => shift.assignmentId === item.id);
+//             axios.delete(`${baseUrl}/shifts/${deleteThisShift.id}.json`);
+//           });
+//       });
+//       resolve();
+//     })
+//     .catch((err) => console.error('problem with deleting assignments for staff', reject(err)));
+// });
+
+const deleteStaffAssignmentsByStaffId = (staffId) => new Promise((resolve, reject) => {
   assignmentsData.getAllAssignments()
     .then((assignmentsArray) => {
-      const assignmentsToRemove = assignmentsArray.filter((a) => a.staffId === staffMemberId);
-      assignmentsToRemove.forEach((item) => {
-        axios.delete(`${baseUrl}/assignments/${item.id}.json`);
-        shiftsData.getAllShifts()
-          .then((shiftsArray) => {
-            const deleteThisShift = shiftsArray.find((shift) => shift.assignmentId === item.id);
-            axios.delete(`${baseUrl}/shifts/${deleteThisShift.id}.json`);
-          });
+      const assignmentsToRemove = assignmentsArray.filter((a) => a.staffId === staffId);
+      assignmentsToRemove.forEach((assignment) => {
+        console.error(assignment);
+        const assignmentId = assignment.id;
+        assignmentsData.deleteAssignmentById(assignmentId);
       });
       resolve();
     })
-    .catch((err) => console.error('problem with deleting assignments for staff', reject(err)));
+    .catch((err) => reject(err));
 });
 
 // const getAllShiftsByDayId = (dayId) => new Promise((resolve, reject) => {
@@ -110,4 +124,4 @@ const getDayWithShifts = (dayId) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { removeAllJobTypesAndAssignmentByAssetId, deleteStaffAssignmentsAndShifts, getDayWithShifts };
+export default { removeAllJobTypesAndAssignmentByAssetId, deleteStaffAssignmentsByStaffId, getDayWithShifts };
