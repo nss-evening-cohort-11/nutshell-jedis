@@ -1,42 +1,42 @@
 {
     "assignment1" : {
         "staffId" : "staffMember1",
-        "entityId" : "dino1",
-        "jobTypeId" : "jobType1"
+        "jobTypeId" : "jobType1",
+        "shiftId" : "shift1"
     },
     "assignment2" : {
         "staffId" : "staffMember2",
-        "entityId" : "equipment2",
-        "jobTypeId" : "jobType2"
+        "jobTypeId" : "jobType2",
+        "shiftId" : "shift2"
     },
     "assignment3" : {
         "staffId" : "staffMember3",
-        "entityId" : "ride4",
-        "jobTypeId" : "jobType4"
+        "jobTypeId" : "jobType9",
+        "shiftId" : "shift3"
     },
     "assignment4" : {
         "staffId" : "staffMember4",
-        "entityId" : "vendor5",
-        "jobTypeId" : "jobType3"
+        "jobTypeId" : "jobType10",
+        "shiftId" : "shift4"
     },
     "assignment5" : {
         "staffId" : "staffMember5",
-        "entityId" : "dino1",
-        "jobTypeId" : "jobType1"
+        "jobTypeId" : "jobType17",
+        "shiftId" : "shift5"
     },
     "assignment6" : {
         "staffId" : "staffMember6",
-        "entityId" : "dino3",
-        "jobTypeId" : "jobType1"
+        "jobTypeId" : "jobType18",
+        "shiftId" : "shift6"
     },
     "assignment7" : {
         "staffId" : "staffMember6",
-        "entityId" : "dino2",
-        "jobTypeId" : "jobType1"
+        "jobTypeId" : "jobType25",
+        "shiftId" : "shift7"
     },
     "assignment8" : {
         "staffId" : "staffMember8",
-        "entityId" : "ride5",
-        "jobTypeId" : "jobType4"
+        "jobTypeId" : "jobType26",
+        "shiftId" : "shift8"
     }
 }

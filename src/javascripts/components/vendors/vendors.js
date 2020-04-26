@@ -10,7 +10,6 @@ const checkIfVendorsAreStaffed = () => {
     assignedVendors.forEach((vendorAssignment) => {
       const vendorId = vendorAssignment.id;
       if (vendorAssignment.assignments.length < 1) {
-        console.log('assigned vendors', vendorAssignment);
         vendorsData.updateStaffedVendors(vendorId);
       }
     });

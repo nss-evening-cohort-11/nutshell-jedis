@@ -41,7 +41,6 @@ const printOverviewDashboard = () => {
     domString += '        <div class="card-body dash-card">';
     vendors.forEach((vendor) => {
       if (vendor.isOpen === false) {
-        console.log('vendorname', vendor.name);
         domString += '<div id="closed-vendor-container">';
         domString += `<p id="${vendor.id}">${vendor.name} is closed!</p>`;
         domString += '</div>';

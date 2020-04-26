@@ -162,15 +162,10 @@ const showAvailableShiftsForSelectedDay = (e) => {
   // const staffId = e.target.closest('.schedule-staff-form').id;
   const selectedDayId = $("input[name='dayRadio']:checked").val();
   smash.getDayWithShifts(selectedDayId)
-    .then((singleDay) => {
-      console.error(singleDay);
+    .then((finalDay) => {
+      console.error(finalDay);
     })
-    .catch((err) => console.error('There is a problem with single day smash function', err));
-  // shiftsData.getShiftsByDayId(selectedDayId)
-  //   .then((shifts) => {
-  //     console.error(shifts);
-  //   })
-  //   .catch((err) => console.error('There is a problem with getting the shifts based on day:', err));
+    .catch((err) => console.error('There is a problem with your smash function:', err));
 };
 
 const printStaff = (staff) => {

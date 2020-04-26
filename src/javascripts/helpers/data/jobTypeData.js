@@ -17,4 +17,20 @@ const getJobTypes = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getJobTypes };
+const getJobTypesByAssetId = (assetId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/jobTypes.json?orderBy="assetId"&equalTo="${assetId}"`)
+    .then((response) => {
+      const theseJobTypes = response.data;
+      const jobTypes = [];
+      Object.keys(theseJobTypes).forEach((jobTypeId) => {
+        theseJobTypes[jobTypeId].id = jobTypeId;
+        jobTypes.push(theseJobTypes[jobTypeId]);
+      });
+      resolve(jobTypes);
+    })
+    .catch((err) => reject(err));
+});
+
+const deleteJobTypeById = (jobTypeId) => axios.delete(`${baseUrl}/jobTypes/${jobTypeId}.json`);
+
+export default { getJobTypes, getJobTypesByAssetId, deleteJobTypeById };

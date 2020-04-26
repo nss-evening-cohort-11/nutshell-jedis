@@ -1,42 +1,34 @@
 {
     "shift1" : {
-        "assignmentId" : "assignment1",
         "dayId" : "day1",
-        "workTimeId" : "workTime1"
+        "workHours" : "AM"
     },
     "shift2" : {
-        "assignmentId" : "assignment2",
         "dayId" : "day1",
-        "workTimeId" : "workTime2"
+        "workHours" : "PM"
     },
     "shift3" : {
-        "assignmentId" : "assignment3",
         "dayId" : "day2",
-        "workTimeId" : "workTime1"
+        "workHours" : "PM"
     },
     "shift4" : {
-        "assignmentId" : "assignment4",
         "dayId" : "day2",
-        "workTimeId" : "workTime2"
+        "workHours" : "PM"
     },
     "shift5" : {
-        "assignmentId" : "assignment5",
         "dayId" : "day3",
-        "workTimeId" : "workTime1"
+        "workHours" : "AM"
     },
     "shift6" : {
-        "assignmentId" : "assignment6",
         "dayId" : "day3",
-        "workTimeId" : "workTime2"
+        "workHours" : "PM"
     },
     "shift7" : {
-        "assignmentId" : "assignment7",
         "dayId" : "day4",
-        "workTimeId" : "workTime1"
+        "workHours" : "AM"
     },
     "shift8" : {
-        "assignmentId" : "assignment8",
         "dayId" : "day5",
-        "workTimeId" : "workTime1"
+        "workHours" : "AM"
     }
 }

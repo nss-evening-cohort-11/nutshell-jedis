@@ -19,7 +19,6 @@ const getVendorsWithAssignments = () => new Promise((resolve, reject) => {
           finalVendors.push(newVendor);
         });
         resolve(finalVendors);
-        console.log('final vendors', finalVendors);
       });
     });
   })

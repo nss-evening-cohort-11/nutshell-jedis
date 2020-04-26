@@ -1,14 +1,130 @@
 {
     "jobType1" : {
-        "name" : "Dino Attendant"
+        "name" : "Dino Attendant",
+        "assetId" : "dino1"
     },
     "jobType2" : {
-        "name" : "Equipment Attendant"
+        "name" : "Dino Attendant",
+        "assetId" : "dino2"
     },
     "jobType3" : {
-        "name" : "Vendor Attendant"
+        "name" : "Dino Attendant",
+        "assetId" : "dino3"
     },
     "jobType4" : {
-        "name" : "Ride Attendant"
+        "name" : "Dino Attendant",
+        "assetId" : "dino4"
+    },
+    "jobType5" : {
+        "name" : "Dino Attendant",
+        "assetId" : "dino5"
+    },
+    "jobType6" : {
+        "name" : "Dino Attendant",
+        "assetId" : "dino6"
+    },
+    "jobType7" : {
+        "name" : "Dino Attendant",
+        "assetId" : "dino7"
+    },
+    "jobType8" : {
+        "name" : "Dino Attendant",
+        "assetId" : "dino8"
+    },
+    "jobType9" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment1"
+    },
+    "jobType10" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment2"
+    },
+    "jobType11" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment3"
+    },
+    "jobType12" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment4"
+    },
+    "jobType13" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment5"
+    },
+    "jobType14" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment6"
+    },
+    "jobType15" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment7"
+    },
+    "jobType16" : {
+        "name" : "Equipment Attendant",
+        "assetId" : "equipment8"
+    },
+    "jobType17" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor1"
+    },
+    "jobType18" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor2"
+    },
+    "jobType19" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor3"
+    },
+    "jobType20" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor4"
+    },
+    "jobType21" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor5"
+    },
+    "jobType22" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor6"
+    },
+    "jobType23" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor7"
+    },
+    "jobType24" : {
+        "name" : "Vendor Attendant",
+        "assetId" : "vendor8"
+    },
+    "jobType25" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride1"
+    },
+    "jobType26" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride2"
+    },
+    "jobType27" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride3"
+    },
+    "jobType28" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride4"
+    },
+    "jobType29" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride5"
+    },
+    "jobType30" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride6"
+    },
+    "jobType31" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride7"
+    },
+    "jobType32" : {
+        "name" : "Ride Attendant",
+        "assetId" : "ride8"
     }
 }
